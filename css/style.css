@@ -1,0 +1,204 @@
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #eee;
+  background: #111;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+p {
+  font-size: .83rem;
+  line-height: 1.8;
+}
+
+
+/* GLOBALS */
+.container {
+  padding: 15px 10%;
+}
+
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.vertical-center {
+  align-items: center; 
+}
+
+.h-center {
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.bottom {
+  justify-content: flex-end;
+}
+
+.inner-wrap header {
+  margin-bottom: 35px;
+}
+
+.inner-wrap h2 {
+  margin-bottom: 15px;
+}
+
+.inner-wrap p {
+  text-align: center;
+  max-width: 475px;
+}
+
+
+
+/* CUSTOM STYLES */
+
+/* Landing */
+.landing {
+  height: 100vh;
+}
+
+.landing header nav {
+  height: 65px;
+}
+
+.landing header nav i.fa-map-marker {
+  font-size: 3rem;
+}
+
+.landing header nav > * {
+  margin: 0 5%;
+}
+
+.landing .hero {
+  height: calc(100% - 65px);
+}
+
+.landing .hero h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.landing .hero p {
+  color: #aaa;
+}
+
+.landing .hero i {
+  font-size: 4rem;
+  margin-top: 50px;
+}
+
+.landing-bg {
+  background-image: url(https://picsum.photos/1200/1100?image=1043);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-bg:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background: rgba(0, 0, 0, .6); */
+  background: linear-gradient(rgba(0, 0, 0, .5) 80%, #111);
+}
+
+
+
+/* Posts */
+.post {
+  width: calc(33.3333% - 30px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 370px;
+  cursor: pointer;
+  margin: 15px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.post:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: background 1.1s;
+}
+
+.post:hover:after {
+  background: rgba(0, 0, 0, .3);
+}
+
+.post-text {
+  position: relative;
+  z-index: 2;
+}
+
+.post-text h3, .post-text p {
+  text-shadow: 1px 1px 7px #000;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+}
+
+footer .footer-image {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0) 98%, #111), 
+    linear-gradient(#111, rgba(0, 0, 0, 0) 98%), 
+    url(https://picsum.photos/800/600?image=1019);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+footer span {
+  margin: 0 15px;
+}
+
+footer nav a {
+  margin: 0 10px;
+  font-size: .85rem;
+}
+
+
+@media (max-width: 650px) {
+  .landing .hero h1 {
+    font-size: 2.5rem;
+  }
+}
