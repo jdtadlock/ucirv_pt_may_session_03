@@ -77,8 +77,16 @@ p {
   height: 100vh;
 }
 
+.landing i.fa-navicon {
+  display: none;
+}
+
 .landing header nav {
   height: 65px;
+}
+
+.landing header i.fa-times {
+  display: none;
 }
 
 .landing header nav i.fa-map-marker {
@@ -129,10 +137,8 @@ p {
   left: 0;
   z-index: -1;
   /* background: rgba(0, 0, 0, .6); */
-  background: linear-gradient(rgba(0, 0, 0, .5) 80%, #111);
+  background: linear-gradient(rgba(0, 0, 0, .6) 80%, #111);
 }
-
-
 
 /* Posts */
 .post {
@@ -169,6 +175,7 @@ p {
 
 .post-text h3, .post-text p {
   text-shadow: 1px 1px 7px #000;
+  text-align: center;
 }
 
 /* Footer */
@@ -187,6 +194,15 @@ footer .footer-image {
   margin-bottom: 15px;
 }
 
+footer p {
+  line-height: initial;
+}
+
+footer i.fa-arrow-circle-up {
+  font-size: 1.6rem;
+  margin-left: 5px;
+}
+
 footer span {
   margin: 0 15px;
 }
@@ -197,8 +213,133 @@ footer nav a {
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 1175px) {
+  .container {
+    padding: 15px 3%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .container {
+    padding: 15px 3%;
+  }
+
+  .post {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
   .landing .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .landing i.fa-navicon {
+    display: initial;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .landing header {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, .7);
+  }
+
+  .landing header i.fa-times {
+    display: initial;
+    position: absolute;
+    right: 45px;
+    top: 35px;
+    z-index: 101;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .landing header nav {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .landing header nav i.fa-map-marker {
+    display: none;
+  }
+
+  .landing header nav a {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+
+  .landing header nav a:last-child {
+    display: none;
+  }
+
+  .post {
+    width: calc(100% - 30px);
+  }
+
+  .post-text h3 {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 15px 1%;
+  }
+
+  footer {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .footer-image {
+    height: 200px;
+  }
+
+  footer .footer-text {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer p {
+    order: 1;
+    margin-top: 5px;
+  }
+
+  footer span {
+    display: none;
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 0;
+  }
+
+  footer nav a {
+    margin: 4px 0;
+    font-size: 1.1rem;
+  }
+
+  footer nav a:last-child {
+    display: none;
+  }
+
+  footer i.fa-arrow-circle-up {
+    margin: 5px 0 0;
   }
 }

@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- Begin Landing -->
   <section class="landing column">
     <div class="landing-bg"></div>
+    <i class="fa fa-navicon"></i>
     <header>
+      <i class="fa fa-times"></i>
       <nav class="row h-center vertical-center">
         <a href="#">About</a>
         <a href="#">Explore</a>
@@ -55,7 +58,7 @@
 
         <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
           <div class="post-text column vertical-center">
-            <h3>Antelope Canyon</h3>
+            <h3>Antelope Canyon and an extra couple of words</h3>
             <p>Norway</p>
           </div>
         </article>
@@ -98,7 +101,7 @@
   
     <div class="footer-image"></div>
   
-    <div class="footer-text row h-center">
+    <div class="footer-text row h-center vertical-center">
       <p>&copy; 2018 The Great Outdoors</p>
       <span>|</span>
       <nav>
@@ -107,8 +110,41 @@
         <a href="#">Journal</a>
         <a href="#">Search</a>
       </nav>
-    </div>
+      <a href="#">
+        <i class="fa fa-arrow-circle-up"></i>
+      </a>
+    </div>    
   
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // console.log('test');
+    
+    // var test = 'test';
+    // console.log(test);
+
+    // function change() {
+    //   test = 'something else';
+    // }
+    // change();
+
+    // console.log(test);
+    $("i.fa-navicon").on("click", function() {
+      // inside
+      // $(".landing header").show("slow");
+      $(".landing header").css("visibility", "visible").animate({
+        opacity: 1
+      }, 1000);
+    });
+
+    $("i.fa-times").on("click", function() {
+      $(".landing header").animate({
+        opacity: 0
+      }, 1000, function() {
+        $(".landing header").css("visibility", "hidden");
+      });
+    });
+  </script>
 </body>
 </html>
