@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <!-- Begin Landing -->
   <section class="landing column">
     <div class="landing-bg"></div>
@@ -40,6 +39,7 @@
 
 
   <div class="container">
+    <div class="overlay"></div>
     <!-- Begin Posts -->
     <section class="inner-wrap">
       <header class="column vertical-center">
@@ -47,44 +47,50 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sint molestiae hic minima ipsam in ducimus non ullam animi fugit iste sed adipisci, corporis blanditiis reiciendis asperiores, corrupti autem nesciunt tempore harum delectus reprehenderit excepturi rerum assumenda. Aperiam itaque explicabo sequi quam maiores architecto, vitae libero temporibus maxime reprehenderit vero totam laudantium doloribus numquam officiis accusamus.</p>
       </header>
 
+      <div class="modal column vertical-center">
+        <img id="modal-image" src="" alt="project image">
+        <h3 id="modal-header"></h3>
+        <p id="modal-text"></p>
+      </div>
+
       <div class="item-wrap row wrap">
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
+        <article id="project-1" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon</h3>
             <p>Norway</p>
           </div>
         </article>
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
+        <article id="project-2" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon and an extra couple of words</h3>
             <p>Norway</p>
           </div>
         </article>
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
+        <article id="project-3" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon</h3>
             <p>Norway</p>
           </div>
         </article>
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
+        <article id="project-4" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon</h3>
             <p>Norway</p>
           </div>
         </article>
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
+        <article id="project-5" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1062)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon</h3>
             <p>Norway</p>
           </div>
         </article>
 
-        <article class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
+        <article id="project-6" class="post column bottom" style="background-image: url(https://picsum.photos/800/600?image=1061)">
           <div class="post-text column vertical-center">
             <h3>Antelope Canyon</h3>
             <p>Norway</p>
@@ -118,33 +124,6 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    // console.log('test');
-    
-    // var test = 'test';
-    // console.log(test);
-
-    // function change() {
-    //   test = 'something else';
-    // }
-    // change();
-
-    // console.log(test);
-    $("i.fa-navicon").on("click", function() {
-      // inside
-      // $(".landing header").show("slow");
-      $(".landing header").css("visibility", "visible").animate({
-        opacity: 1
-      }, 1000);
-    });
-
-    $("i.fa-times").on("click", function() {
-      $(".landing header").animate({
-        opacity: 0
-      }, 1000, function() {
-        $(".landing header").css("visibility", "hidden");
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
